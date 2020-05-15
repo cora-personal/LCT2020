@@ -16,6 +16,7 @@ class RecipesViewController: UIViewController {
     struct TableView {
         struct CellIdentifiers {
             static let recipeSearchResultCell = "RecipeSearchResultCell"
+            static let nothingFoundCell = "NothingFoundCell"
         }
     }
     
@@ -24,9 +25,14 @@ class RecipesViewController: UIViewController {
         //title = "Recipe" //made this change in storyboard
         tableView.contentInset = UIEdgeInsets(top: 64, left: 0,
                                               bottom: 0, right: 0)
-        let cellNib = UINib(nibName: TableView.CellIdentifiers.recipeSearchResultCell, bundle: nil)
+        var cellNib = UINib(nibName: TableView.CellIdentifiers.recipeSearchResultCell, bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier:
             TableView.CellIdentifiers.recipeSearchResultCell)
+        
+        cellNib = UINib(nibName:
+            TableView.CellIdentifiers.nothingFoundCell, bundle: nil)
+        tableView.register(cellNib, forCellReuseIdentifier:
+        TableView.CellIdentifiers.nothingFoundCell)
     }
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -44,7 +50,7 @@ extension RecipesViewController: UISearchBarDelegate {
         if searchBar.text! != "Cat" { //was JB
             for i in 0...2 {
                 let searchResult = RecipeSearchResult()
-                searchResult.name = " \(String(format: "Fake Result %d for", i)) \(searchBar.text!)"
+                searchResult.name = " \(String(format: "Fake Result %d for ", i)) \(searchBar.text!)"
                 searchResult.img = searchBar.text!
                 searchResults.append(searchResult)
             }
@@ -73,15 +79,16 @@ extension RecipesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
-        let cell = tableView.dequeueReusableCell(withIdentifier: TableView.CellIdentifiers.recipeSearchResultCell, for: indexPath)  as! RecipeSearchResultCell
         if searchResults.count == 0 {
-            cell.nameLabel.text = "(Nothing found)"
+            return tableView.dequeueReusableCell(withIdentifier: TableView.CellIdentifiers.nothingFoundCell, for: indexPath)
         } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: TableView.CellIdentifiers.recipeSearchResultCell, for: indexPath) as! RecipeSearchResultCell
             let searchResult = searchResults[indexPath.row]
             cell.nameLabel.text = searchResult.name
-           // cell.artistnameLabel.text = searchResult.img
+           // cell.artistNameLabel.text = searchResult.artistName
+            return cell
         }
-        return cell
+        
     }
     
     func tableView(_ tableView: UITableView,
