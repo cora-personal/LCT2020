@@ -13,14 +13,20 @@ class RecipesViewController: UIViewController {
     var searchResults = [RecipeSearchResult]()
     var hasSearched = false
     
+    struct TableView {
+        struct CellIdentifiers {
+            static let recipeSearchResultCell = "RecipeSearchResultCell"
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //title = "Recipe" //made this change in storyboard
         tableView.contentInset = UIEdgeInsets(top: 64, left: 0,
                                               bottom: 0, right: 0)
-        let cellNib = UINib(nibName: "RecipeSearchResultCell", bundle: nil)
+        let cellNib = UINib(nibName: TableView.CellIdentifiers.recipeSearchResultCell, bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier:
-            "RecipeSearchResultCell")
+            TableView.CellIdentifiers.recipeSearchResultCell)
     }
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -67,7 +73,7 @@ extension RecipesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeSearchResultCell", for: indexPath)  as! RecipeSearchResultCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: TableView.CellIdentifiers.recipeSearchResultCell, for: indexPath)  as! RecipeSearchResultCell
         if searchResults.count == 0 {
             cell.nameLabel.text = "(Nothing found)"
         } else {
