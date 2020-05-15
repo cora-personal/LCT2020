@@ -358,7 +358,7 @@
             </objects>
             <point key="canvasLocation" x="4148" y="1214"/>
         </scene>
-        <!--Recipes-->
+        <!--Recipes TV-->
         <scene sceneID="HpB-nC-j0P">
             <objects>
                 <viewController id="8qS-Wr-3nY" customClass="RecipesViewController" customModule="LCT2020" customModuleProvider="target" sceneMemberID="viewController">
@@ -366,21 +366,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recipes Table View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hF-zv-0x6">
-                                <rect key="frame" x="86" y="431" width="148" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LfE-xC-u1r">
-                                <rect key="frame" x="124" y="460" width="80" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="View recipe"/>
-                                <connections>
-                                    <segue destination="mCZ-Hi-JLj" kind="show" id="FN2-JS-sDT"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKX-IH-fEq">
                                 <rect key="frame" x="25" y="88" width="279" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -388,25 +373,38 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="This feature is currently under development " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BAt-e1-1Ea">
-                                <rect key="frame" x="16" y="88" width="288" height="75"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Txc-lZ-3Fm">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="mq1-Mt-hBd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="2Dd-ty-oOv">
+                                <rect key="frame" x="0.0" y="64" width="320" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="BAt-e1-1Ea" firstAttribute="top" secondItem="725-ui-ifV" secondAttribute="top" constant="24" id="Cbo-Ke-OFQ"/>
-                            <constraint firstItem="BAt-e1-1Ea" firstAttribute="leading" secondItem="725-ui-ifV" secondAttribute="leading" constant="16" id="oPA-FD-OLV"/>
-                            <constraint firstItem="725-ui-ifV" firstAttribute="trailing" secondItem="BAt-e1-1Ea" secondAttribute="trailing" constant="16" id="xnR-pb-HzD"/>
+                            <constraint firstItem="Txc-lZ-3Fm" firstAttribute="bottom" secondItem="725-ui-ifV" secondAttribute="bottom" id="4ww-KZ-7b9"/>
+                            <constraint firstItem="2Dd-ty-oOv" firstAttribute="trailing" secondItem="725-ui-ifV" secondAttribute="trailing" id="7MY-cU-iQT"/>
+                            <constraint firstItem="Txc-lZ-3Fm" firstAttribute="leading" secondItem="725-ui-ifV" secondAttribute="leading" id="CMg-qG-5aF"/>
+                            <constraint firstItem="2Dd-ty-oOv" firstAttribute="top" secondItem="725-ui-ifV" secondAttribute="top" id="L7c-rL-PS5"/>
+                            <constraint firstItem="Txc-lZ-3Fm" firstAttribute="trailing" secondItem="725-ui-ifV" secondAttribute="trailing" id="aPZ-p8-r29"/>
+                            <constraint firstItem="Txc-lZ-3Fm" firstAttribute="top" secondItem="725-ui-ifV" secondAttribute="top" id="psC-WU-gVr"/>
+                            <constraint firstItem="2Dd-ty-oOv" firstAttribute="leading" secondItem="725-ui-ifV" secondAttribute="leading" id="yWZ-JI-aZA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="725-ui-ifV"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Recipes" id="6Vo-Pa-4aP"/>
+                    <navigationItem key="navigationItem" title="Recipes TV" id="6Vo-Pa-4aP">
+                        <barButtonItem key="rightBarButtonItem" title="View Recipe" id="Udt-Iq-yaT">
+                            <connections>
+                                <segue destination="mCZ-Hi-JLj" kind="show" id="wp2-8B-ciW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="2Dd-ty-oOv" id="a4I-6a-hc0"/>
+                        <outlet property="tableView" destination="Txc-lZ-3Fm" id="zgH-Cp-vof"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IuN-Qp-NMT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
