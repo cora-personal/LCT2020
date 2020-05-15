@@ -20,6 +20,8 @@
 		36C8EADF24686C08000FC295 /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C8EADE24686C08000FC295 /* RecipesViewController.swift */; };
 		36CA5A622466156F00327CDA /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA5A612466156F00327CDA /* MainTabController.swift */; };
 		36E6DAD8246EF3F7000537B9 /* RecipeSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E6DAD7246EF3F7000537B9 /* RecipeSearchResult.swift */; };
+		36E6DADC246EFEEB000537B9 /* RecipeSearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36E6DADB246EFEEB000537B9 /* RecipeSearchResultCell.xib */; };
+		36E6DADE246F07DA000537B9 /* RecipeSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E6DADD246F07DA000537B9 /* RecipeSearchResultCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		36C8EADE24686C08000FC295 /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
 		36CA5A612466156F00327CDA /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
 		36E6DAD7246EF3F7000537B9 /* RecipeSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSearchResult.swift; sourceTree = "<group>"; };
+		36E6DADB246EFEEB000537B9 /* RecipeSearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeSearchResultCell.xib; sourceTree = "<group>"; };
+		36E6DADD246F07DA000537B9 /* RecipeSearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSearchResultCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 		367F888124058D390004EEC7 /* LCT2020 */ = {
 			isa = PBXGroup;
 			children = (
+				36E6DADB246EFEEB000537B9 /* RecipeSearchResultCell.xib */,
 				367F888224058D390004EEC7 /* AppDelegate.swift */,
 				367F888424058D390004EEC7 /* SignInViewController.swift */,
 				367F888624058D390004EEC7 /* Main.storyboard */,
@@ -78,6 +83,7 @@
 				36C8EAD624686A41000FC295 /* SessionViewController.swift */,
 				36C8EADC24686B9B000FC295 /* AccountViewController.swift */,
 				36C8EADE24686C08000FC295 /* RecipesViewController.swift */,
+				36E6DADD246F07DA000537B9 /* RecipeSearchResultCell.swift */,
 				36CA5A612466156F00327CDA /* MainTabController.swift */,
 				360885BD2464A1D90029B36D /* DesignableView.swift */,
 				360885BB246377A80029B36D /* RegisterViewController.swift */,
@@ -146,6 +152,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36E6DADC246EFEEB000537B9 /* RecipeSearchResultCell.xib in Resources */,
 				367F888D24058D3A0004EEC7 /* LaunchScreen.storyboard in Resources */,
 				367F888A24058D3A0004EEC7 /* Assets.xcassets in Resources */,
 				367F888824058D390004EEC7 /* Main.storyboard in Resources */,
@@ -166,6 +173,7 @@
 				36C8EADF24686C08000FC295 /* RecipesViewController.swift in Sources */,
 				36C8EADB24686B65000FC295 /* HomeViewController.swift in Sources */,
 				36C8EADD24686B9B000FC295 /* AccountViewController.swift in Sources */,
+				36E6DADE246F07DA000537B9 /* RecipeSearchResultCell.swift in Sources */,
 				367F888324058D390004EEC7 /* AppDelegate.swift in Sources */,
 				36C8EAD724686A41000FC295 /* SessionViewController.swift in Sources */,
 				360885BC246377A80029B36D /* RegisterViewController.swift in Sources */,
