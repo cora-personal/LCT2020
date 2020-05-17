@@ -12,10 +12,18 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    // MARK:- Helper Methods
+    func customizeAppearance() {
+        let barTintColor = UIColor.init(named: "pale grey")
+        UINavigationBar.appearance().barTintColor = barTintColor
+        UISearchBar.appearance().barTintColor = barTintColor
+        window!.tintColor = UIColor.init(named: "green")
+    }
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        customizeAppearance()
         return true
     }
 

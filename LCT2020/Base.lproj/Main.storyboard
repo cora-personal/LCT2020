@@ -358,7 +358,7 @@
             </objects>
             <point key="canvasLocation" x="4148" y="1214"/>
         </scene>
-        <!--Recipes TV-->
+        <!--Recipes-->
         <scene sceneID="HpB-nC-j0P">
             <objects>
                 <viewController id="8qS-Wr-3nY" customClass="RecipesViewController" customModule="LCT2020" customModuleProvider="target" sceneMemberID="viewController">
@@ -388,14 +388,14 @@
                                 <rect key="frame" x="35" y="129" width="250" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="Name"/>
-                                    <segment title="Ingredients"/>
+                                    <segment title="NAME"/>
+                                    <segment title="INGREDIENTS"/>
                                 </segments>
                                 <connections>
                                     <action selector="segmentChanged:" destination="8qS-Wr-3nY" eventType="valueChanged" id="QZV-36-8Vn"/>
                                 </connections>
                             </segmentedControl>
-                            <searchBar contentMode="redraw" placeholder="Recipe Name" translatesAutoresizingMaskIntoConstraints="NO" id="2Dd-ty-oOv">
+                            <searchBar contentMode="redraw" text="" placeholder="Search for a recipe by ‘name’ " translatesAutoresizingMaskIntoConstraints="NO" id="2Dd-ty-oOv">
                                 <rect key="frame" x="0.0" y="64" width="320" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -418,7 +418,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="725-ui-ifV"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Recipes TV" id="6Vo-Pa-4aP">
+                    <navigationItem key="navigationItem" title="Recipes" id="6Vo-Pa-4aP">
                         <barButtonItem key="rightBarButtonItem" title="View Recipe" id="Udt-Iq-yaT">
                             <connections>
                                 <segue destination="mCZ-Hi-JLj" kind="show" id="wp2-8B-ciW"/>

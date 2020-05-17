@@ -22,9 +22,9 @@ class RecipesViewController: UIViewController {
         hasSearched = false
         tableView.reloadData()
         if segmentedControl.selectedSegmentIndex == 0 {
-            searchBar.placeholder = "Recipe Name"
+            searchBar.placeholder = "Search for a recipe by ‘name’"
         } else if segmentedControl.selectedSegmentIndex == 1 {
-            searchBar.placeholder = "Leftover Ingredients"
+            searchBar.placeholder = "Search for a recipe by ‘leftover ingredients’"
         }
         
         
@@ -42,7 +42,7 @@ class RecipesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //title = "Recipe" //made this change in storyboard
-        tableView.contentInset = UIEdgeInsets(top: 100, left: 0,
+        tableView.contentInset = UIEdgeInsets(top: 98, left: 0,
                                               bottom: 0, right: 0)
         var cellNib = UINib(nibName: TableView.CellIdentifiers.recipeSearchResultCell, bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier:
