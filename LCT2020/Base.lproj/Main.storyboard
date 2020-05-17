@@ -358,10 +358,10 @@
             </objects>
             <point key="canvasLocation" x="4148" y="1214"/>
         </scene>
-        <!--Recipes-->
+        <!--Recipes Search-->
         <scene sceneID="HpB-nC-j0P">
             <objects>
-                <viewController id="8qS-Wr-3nY" customClass="RecipesViewController" customModule="LCT2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8qS-Wr-3nY" userLabel="Recipes Search" customClass="RecipesViewController" customModule="LCT2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="laW-Dn-EWP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -418,46 +418,76 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="725-ui-ifV"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Recipes" id="6Vo-Pa-4aP">
-                        <barButtonItem key="rightBarButtonItem" title="View Recipe" id="Udt-Iq-yaT">
-                            <connections>
-                                <segue destination="mCZ-Hi-JLj" kind="show" id="wp2-8B-ciW"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Recipes" id="6Vo-Pa-4aP"/>
                     <connections>
                         <outlet property="searchBar" destination="2Dd-ty-oOv" id="a4I-6a-hc0"/>
                         <outlet property="segmentedControl" destination="vbI-5p-k4F" id="fqf-aT-NeH"/>
                         <outlet property="tableView" destination="Txc-lZ-3Fm" id="zgH-Cp-vof"/>
+                        <segue destination="mCZ-Hi-JLj" kind="show" identifier="ShowDetail" id="6py-nb-mlG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IuN-Qp-NMT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3286.875" y="-305.28169014084506"/>
         </scene>
-        <!--Recipe-->
+        <!--Recipe Detail-->
         <scene sceneID="aJR-A4-kNI">
             <objects>
-                <viewController title="Recipe" id="mCZ-Hi-JLj" customClass="RecipeViewController" customModule="LCT2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Recipe" id="mCZ-Hi-JLj" userLabel="Recipe Detail" customClass="RecipeDetailViewController" customModule="LCT2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JtC-Yf-Qhd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recipes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfT-Te-yzW">
-                                <rect key="frame" x="106" y="274" width="61" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfT-Te-yzW">
+                                <rect key="frame" x="16" y="215" width="288" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zsS-Lw-1NX">
+                                <rect key="frame" x="98" y="82" width="125" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Ingredients" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fPh-mc-fc6">
+                                <rect key="frame" x="16" y="257" width="288" height="204"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZM-Jv-Ef7">
+                                <rect key="frame" x="16" y="464" width="288" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.3313705623" green="0.88674461839999996" blue="0.063861556350000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="METHOD">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AZr-Zv-n5q"/>
+                                    <action selector="methodLinkButton:" destination="mCZ-Hi-JLj" eventType="touchUpInside" id="7CO-Sv-cQn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="i0a-wr-OLb"/>
                     </view>
+                    <connections>
+                        <outlet property="ingredientsTextView" destination="fPh-mc-fc6" id="i82-nH-Ney"/>
+                        <outlet property="methodLinkButton" destination="rZM-Jv-Ef7" id="7QA-1H-A8d"/>
+                        <outlet property="nameLabel" destination="XfT-Te-yzW" id="Fnm-Pe-aMc"/>
+                        <outlet property="recipeImageView" destination="zsS-Lw-1NX" id="AWk-BZ-yVe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T7Q-A9-8rD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4148" y="-305"/>
+            <point key="canvasLocation" x="4147.5" y="-305.28169014084506"/>
         </scene>
         <!--Main Tab Controller-->
         <scene sceneID="UnD-xy-fwW">

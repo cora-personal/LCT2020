@@ -59,6 +59,17 @@ class RecipesViewController: UIViewController {
             TableView.CellIdentifiers.loadingCell)
     }
     
+    override func prepare(for segue: UIStoryboardSegue,
+                          sender: Any?) {
+        if segue.identifier == "ShowDetail" {
+            let recipeDetailViewController = segue.destination
+                as! RecipeDetailViewController
+            let indexPath = sender as! IndexPath
+            let searchResult = searchResults[indexPath.row]
+            recipeDetailViewController.searchResult = searchResult
+        }
+    }
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
@@ -106,6 +117,7 @@ class RecipesViewController: UIViewController {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         performSearch()
     }
+    
 }
 
 extension RecipesViewController: UISearchBarDelegate {
@@ -195,6 +207,7 @@ extension RecipesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "ShowDetail", sender: indexPath)
     }
     
     func tableView(_ tableView: UITableView,

@@ -18,7 +18,7 @@ class RecipeSearchResult:Codable, CustomStringConvertible {
     //do I/why give default values?
     //var title: String? = ""
     var recipeName = "" //dont think its an optional
-    var recipeLink: String? = ""
+    var recipeLink = ""
     var ingredients: String? = ""
     var thumbnail = ""
    
@@ -34,7 +34,7 @@ class RecipeSearchResult:Codable, CustomStringConvertible {
     
     
     var description: String {
-        return "Name: \(recipeName), Link: \(recipeLink ?? "None"), Ingredients: \(ingredients ?? "None")"
+        return "Name: \(recipeName), Link: \(recipeLink), Ingredients: \(ingredients ?? "None")"
         //return "Name: \(title ?? "None"), Link: \(href ?? "None"), Ingredients: \(ingredients ?? "None")"
     }
 }

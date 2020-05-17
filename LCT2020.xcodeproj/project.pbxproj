@@ -11,6 +11,7 @@
 		360885BE2464A1D90029B36D /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360885BD2464A1D90029B36D /* DesignableView.swift */; };
 		367864C62471A5D900197E04 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 367864C52471A5D900197E04 /* LoadingCell.xib */; };
 		367864C82471CD3100197E04 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367864C72471CD3100197E04 /* UIImageView+DownloadImage.swift */; };
+		367864CA2471DE9500197E04 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367864C92471DE9500197E04 /* RecipeDetailViewController.swift */; };
 		367F888324058D390004EEC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367F888224058D390004EEC7 /* AppDelegate.swift */; };
 		367F888524058D390004EEC7 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367F888424058D390004EEC7 /* SignInViewController.swift */; };
 		367F888824058D390004EEC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 367F888624058D390004EEC7 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 		360885BD2464A1D90029B36D /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		367864C52471A5D900197E04 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		367864C72471CD3100197E04 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
+		367864C92471DE9500197E04 /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
 		367F887F24058D390004EEC7 /* LCT2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LCT2020.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		367F888224058D390004EEC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		367F888424058D390004EEC7 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				360885BD2464A1D90029B36D /* DesignableView.swift */,
 				360885BB246377A80029B36D /* RegisterViewController.swift */,
 				367F888924058D3A0004EEC7 /* Assets.xcassets */,
+				367864C92471DE9500197E04 /* RecipeDetailViewController.swift */,
 				367F888B24058D3A0004EEC7 /* LaunchScreen.storyboard */,
 				367F888E24058D3A0004EEC7 /* Info.plist */,
 			);
@@ -177,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				367864CA2471DE9500197E04 /* RecipeDetailViewController.swift in Sources */,
 				360885BE2464A1D90029B36D /* DesignableView.swift in Sources */,
 				36CA5A622466156F00327CDA /* MainTabController.swift in Sources */,
 				36E6DAD8246EF3F7000537B9 /* RecipeSearchResult.swift in Sources */,
