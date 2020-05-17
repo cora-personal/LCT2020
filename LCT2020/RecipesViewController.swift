@@ -13,6 +13,23 @@ class RecipesViewController: UIViewController {
     var searchResults = [RecipeSearchResult]()
     var hasSearched = false
     var isLoading = false
+    var dataTask: URLSessionDataTask?
+    
+    
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBAction func segmentChanged(_ sender: UISegmentedControl) {
+        searchBar.text = ""
+        hasSearched = false
+        tableView.reloadData()
+        if segmentedControl.selectedSegmentIndex == 0 {
+            searchBar.placeholder = "Recipe Name"
+        } else if segmentedControl.selectedSegmentIndex == 1 {
+            searchBar.placeholder = "Leftover Ingredients"
+        }
+        
+        
+        performSearch()
+    }
     
     struct TableView {
         struct CellIdentifiers {
@@ -25,7 +42,7 @@ class RecipesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //title = "Recipe" //made this change in storyboard
-        tableView.contentInset = UIEdgeInsets(top: 64, left: 0,
+        tableView.contentInset = UIEdgeInsets(top: 100, left: 0,
                                               bottom: 0, right: 0)
         var cellNib = UINib(nibName: TableView.CellIdentifiers.recipeSearchResultCell, bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier:
@@ -46,14 +63,23 @@ class RecipesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // MARK:- Helper Methods
-    func recipePuppyURL(searchText: String) -> URL {
-        let searchText = searchText.replacingOccurrences(of: ",", with: "")
+    func recipePuppyURL(searchText: String, category: Int) -> URL {
+        let kind: String
+        switch category {
+        case 0: kind = "q=" //query
+        case 1: kind =  "i=" //ingredient
+        default: kind = "q="
+        }
+        
+        //let searchText = searchText.replacingOccurrences(of: " ", with: "")
         let encodedText = searchText.addingPercentEncoding(
             withAllowedCharacters: CharacterSet.urlQueryAllowed)!
         let urlString = String(format:
-            "http://www.recipepuppy.com/api/?q=%@", encodedText)
+            "http://www.recipepuppy.com/api/?\(kind)%@", encodedText)
             // "http://www.recipepuppy.com/api/?q=%@&limit=200", encodedText) this is supposed to return more results but doesnt work
+        print(urlString)
         let url = URL(string: urlString)
+        
         return url!
     }
     
@@ -76,23 +102,28 @@ class RecipesViewController: UIViewController {
         present(alert, animated: true, completion: nil)
         alert.addAction(action)
     }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        performSearch()
+    }
 }
 
 extension RecipesViewController: UISearchBarDelegate {
     
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    func performSearch() {
         if !searchBar.text!.isEmpty {
             searchBar.resignFirstResponder()
+            dataTask?.cancel()
             isLoading = true
             tableView.reloadData()
             hasSearched = true
             searchResults = []
-            let url = recipePuppyURL(searchText: searchBar.text!)
+            let url = recipePuppyURL(searchText: searchBar.text!, category: segmentedControl.selectedSegmentIndex)
             let session = URLSession.shared
-            let dataTask = session.dataTask(with: url,
+            dataTask = session.dataTask(with: url,
                 completionHandler: { data, response, error in
-                    if let error = error {
-                        print("Failure! \(error.localizedDescription)")
+                    if let error = error as NSError?, error.code == -999 {
+                        return  // Search was cancelled
                     } else if let httpResponse = response as? HTTPURLResponse,
                         httpResponse.statusCode == 200 {
                         if let data = data {
@@ -114,7 +145,7 @@ extension RecipesViewController: UISearchBarDelegate {
                         self.showNetworkError()
                     }
             })
-            dataTask.resume()
+            dataTask?.resume()
         }
     }
     
@@ -153,9 +184,10 @@ extension RecipesViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: TableView.CellIdentifiers.recipeSearchResultCell, for: indexPath) as! RecipeSearchResultCell
             let searchResult = searchResults[indexPath.row]
-            cell.nameLabel.text = searchResult.recipeName
-           // cell.artistNameLabel.text = searchResult.artistName
+            cell.configure(for: searchResult)
             return cell
+            //cell.nameLabel.text = searchResult.recipeName //MOVED TO CELL
+           // cell.artistNameLabel.text = searchResult.artistName
         }
         
     }

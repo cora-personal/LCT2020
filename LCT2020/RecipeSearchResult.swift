@@ -20,7 +20,7 @@ class RecipeSearchResult:Codable, CustomStringConvertible {
     var recipeName = "" //dont think its an optional
     var recipeLink: String? = ""
     var ingredients: String? = ""
-    var thumbnail: String? = ""
+    var thumbnail = ""
    
     //var name:String {
     //    return  title ?? ""

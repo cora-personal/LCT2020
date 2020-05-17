@@ -381,7 +381,21 @@
                                     <outlet property="delegate" destination="8qS-Wr-3nY" id="Vrl-hV-ji5"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="2Dd-ty-oOv">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cy7-n8-0Nn">
+                                <rect key="frame" x="0.0" y="120" width="320" height="44"/>
+                            </navigationBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vbI-5p-k4F">
+                                <rect key="frame" x="35" y="129" width="250" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Name"/>
+                                    <segment title="Ingredients"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="8qS-Wr-3nY" eventType="valueChanged" id="QZV-36-8Vn"/>
+                                </connections>
+                            </segmentedControl>
+                            <searchBar contentMode="redraw" placeholder="Recipe Name" translatesAutoresizingMaskIntoConstraints="NO" id="2Dd-ty-oOv">
                                 <rect key="frame" x="0.0" y="64" width="320" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -394,9 +408,12 @@
                             <constraint firstItem="Txc-lZ-3Fm" firstAttribute="bottom" secondItem="725-ui-ifV" secondAttribute="bottom" id="4ww-KZ-7b9"/>
                             <constraint firstItem="2Dd-ty-oOv" firstAttribute="trailing" secondItem="725-ui-ifV" secondAttribute="trailing" id="7MY-cU-iQT"/>
                             <constraint firstItem="Txc-lZ-3Fm" firstAttribute="leading" secondItem="725-ui-ifV" secondAttribute="leading" id="CMg-qG-5aF"/>
+                            <constraint firstItem="cy7-n8-0Nn" firstAttribute="leading" secondItem="725-ui-ifV" secondAttribute="leading" id="EhP-iB-PBg"/>
                             <constraint firstItem="2Dd-ty-oOv" firstAttribute="top" secondItem="725-ui-ifV" secondAttribute="top" id="L7c-rL-PS5"/>
+                            <constraint firstItem="cy7-n8-0Nn" firstAttribute="top" secondItem="2Dd-ty-oOv" secondAttribute="bottom" id="TO1-Pg-kwf"/>
                             <constraint firstItem="Txc-lZ-3Fm" firstAttribute="trailing" secondItem="725-ui-ifV" secondAttribute="trailing" id="aPZ-p8-r29"/>
                             <constraint firstItem="Txc-lZ-3Fm" firstAttribute="top" secondItem="725-ui-ifV" secondAttribute="top" id="psC-WU-gVr"/>
+                            <constraint firstItem="cy7-n8-0Nn" firstAttribute="trailing" secondItem="725-ui-ifV" secondAttribute="trailing" id="tBz-Vf-d0M"/>
                             <constraint firstItem="2Dd-ty-oOv" firstAttribute="leading" secondItem="725-ui-ifV" secondAttribute="leading" id="yWZ-JI-aZA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="725-ui-ifV"/>
@@ -410,6 +427,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="2Dd-ty-oOv" id="a4I-6a-hc0"/>
+                        <outlet property="segmentedControl" destination="vbI-5p-k4F" id="fqf-aT-NeH"/>
                         <outlet property="tableView" destination="Txc-lZ-3Fm" id="zgH-Cp-vof"/>
                     </connections>
                 </viewController>
