@@ -12,6 +12,7 @@ class RecipesViewController: UIViewController {
     
     var searchResults = [RecipeSearchResult]()
     var hasSearched = false
+    var isLoading = false
     
     struct TableView {
         struct CellIdentifiers {
@@ -91,19 +92,25 @@ extension RecipesViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if !searchBar.text!.isEmpty {
             searchBar.resignFirstResponder()
+            isLoading = true
+            tableView.reloadData()
             hasSearched = true
             searchResults = []
-            let url = recipePuppyURL(searchText: searchBar.text!)
-            print("URL: '\(url)'")
-
-            if let data = performRequest(with: url) {
-                searchResults = parse(data: data)
-                 searchResults.sort(by: <)
+            let queue = DispatchQueue.global()
+            let url = self.recipePuppyURL(searchText: searchBar.text!)
+            queue.async {
+                if let data = self.performRequest(with: url) {
+                    self.searchResults = self.parse(data: data)
+                    self.searchResults.sort(by: <)
+                    DispatchQueue.main.async {
+                        self.isLoading = false
+                        self.tableView.reloadData()
+                    }
+                    return
+                }
             }
-            tableView.reloadData()
         }
     }
-            
     
     //this doesnt blend the serach bar with the statue bar anymore with the search now with the nav controller
     func position(for bar: UIBarPositioning) -> UIBarPosition {
@@ -115,7 +122,9 @@ extension RecipesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
-        if !hasSearched {
+        if isLoading {
+            return 1
+        } else if !hasSearched {
             return 0
         } else if searchResults.count == 0 { //this is to display no results
             return 1
@@ -126,8 +135,14 @@ extension RecipesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       
-        if searchResults.count == 0 {
+        if isLoading {
+            let cell = tableView.dequeueReusableCell(withIdentifier:
+                TableView.CellIdentifiers.loadingCell, for: indexPath)
+            let spinner = cell.viewWithTag(100) as!
+            UIActivityIndicatorView
+            spinner.startAnimating()
+            return cell
+        } else if searchResults.count == 0 {
             return tableView.dequeueReusableCell(withIdentifier: TableView.CellIdentifiers.nothingFoundCell, for: indexPath)
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: TableView.CellIdentifiers.recipeSearchResultCell, for: indexPath) as! RecipeSearchResultCell
@@ -146,7 +161,8 @@ extension RecipesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView,
                    willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        if searchResults.count == 0 {
+        
+        if searchResults.count == 0 || isLoading {    // Changed
             return nil
         } else {
             return indexPath
