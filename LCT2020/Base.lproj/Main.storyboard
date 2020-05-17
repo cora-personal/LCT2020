@@ -526,7 +526,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Introduction" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="If9-Mx-eKK">
-                                <rect key="frame" x="2" y="227" width="318" height="25"/>
+                                <rect key="frame" x="0.0" y="227" width="320" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="0.94671544890000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
@@ -599,11 +599,11 @@ Lydia coaches at various clubs in Liverpool and the Wirral so be sure to book on
             </objects>
             <point key="canvasLocation" x="2301" y="412"/>
         </scene>
-        <!--Account-->
+        <!--Navigation Controller-->
         <scene sceneID="Yfd-tY-OJ1">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cYx-Id-0cH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Account" image="AccountIconSelected" id="2KI-Fh-7M0"/>
+                    <tabBarItem key="tabBarItem" title="" image="AccountIconSelected" id="2KI-Fh-7M0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="G4E-iQ-wu5">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
