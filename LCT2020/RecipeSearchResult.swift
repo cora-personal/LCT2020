@@ -8,8 +8,25 @@
 
 import Foundation
 
-class RecipeSearchResult {
-    var name = ""   //recipeName
-    var img = "" //var artistName = "" 
-    
+class ResultArray:Codable {
+    var title = ""
+    var version = 0.0
+    var href = ""
+    var results = [RecipeSearchResult]()
 }
+class RecipeSearchResult:Codable, CustomStringConvertible {
+    var title: String? = ""
+    //var href: String? = ""
+   var ingredients: String? = ""
+  //  var thumbnail: String? = ""
+    
+   
+    //var name:String {
+    //    return  title ?? ""
+    //}
+    
+    var description: String {
+        return "Name: \(title ?? "None"), Ingredients: \(ingredients ?? "None")"
+    }
+}
+

@@ -49,13 +49,23 @@ class RecipesViewController: UIViewController {
         return url!
     }
     
-    func performRequest(with url: URL) -> String? {
+    func performRequest(with url: URL) -> Data? {
         do {
-            return try String(contentsOf: url, encoding: .utf8)
+            return try Data(contentsOf: url)
         } catch {
             print("Download Error: \(error.localizedDescription)")
             return nil
         }
+    }
+    
+    func parse(data: Data) -> [RecipeSearchResult] {
+        do {
+            let decoder = JSONDecoder()
+            let result = try decoder.decode(ResultArray.self, from:data)
+            return result.results
+        } catch {
+            print("JSON Error: \(error)")
+            return [] }
     }
 }
 
@@ -68,8 +78,10 @@ extension RecipesViewController: UISearchBarDelegate {
             searchResults = []
             let url = recipePuppyURL(searchText: searchBar.text!)
             print("URL: '\(url)'")
-            if let jsonString = performRequest(with: url) {
-                print("Received JSON string '\(jsonString)'")
+
+            if let data = performRequest(with: url) {
+                let results = parse(data: data)
+                print("Got results: \(results)")
             }
             tableView.reloadData()
         }
@@ -103,7 +115,7 @@ extension RecipesViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: TableView.CellIdentifiers.recipeSearchResultCell, for: indexPath) as! RecipeSearchResultCell
             let searchResult = searchResults[indexPath.row]
-            cell.nameLabel.text = searchResult.name
+            cell.nameLabel.text = searchResult.title
            // cell.artistNameLabel.text = searchResult.artistName
             return cell
         }
