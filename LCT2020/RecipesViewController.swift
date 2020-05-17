@@ -37,26 +37,45 @@ class RecipesViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
-
+    
+    // MARK:- Helper Methods
+    func recipePuppyURL(searchText: String) -> URL {
+        let searchText = searchText.replacingOccurrences(of: ",", with: "")
+        let encodedText = searchText.addingPercentEncoding(
+            withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+        let urlString = String(format:
+            "http://www.recipepuppy.com/api/?q=%@", encodedText)
+        let url = URL(string: urlString)
+        return url!
+    }
+    
+    func performRequest(with url: URL) -> String? {
+        do {
+            return try String(contentsOf: url, encoding: .utf8)
+        } catch {
+            print("Download Error: \(error.localizedDescription)")
+            return nil
+        }
+    }
 }
 
 extension RecipesViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
-        searchResults = []
-        hasSearched = true
-        
-        if searchBar.text! != "Cat" { //was JB
-            for i in 0...2 {
-                let searchResult = RecipeSearchResult()
-                searchResult.name = " \(String(format: "Fake Result %d for ", i)) \(searchBar.text!)"
-                searchResult.img = searchBar.text!
-                searchResults.append(searchResult)
+        if !searchBar.text!.isEmpty {
+            searchBar.resignFirstResponder()
+            hasSearched = true
+            searchResults = []
+            let url = recipePuppyURL(searchText: searchBar.text!)
+            print("URL: '\(url)'")
+            if let jsonString = performRequest(with: url) {
+                print("Received JSON string '\(jsonString)'")
             }
+            tableView.reloadData()
         }
-        tableView.reloadData()
     }
+            
+    
     //this doesnt blend the serach bar with the statue bar anymore with the search now with the nav controller
     func position(for bar: UIBarPositioning) -> UIBarPosition {
         return .topAttached
