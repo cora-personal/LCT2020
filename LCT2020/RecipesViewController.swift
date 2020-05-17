@@ -17,6 +17,7 @@ class RecipesViewController: UIViewController {
         struct CellIdentifiers {
             static let recipeSearchResultCell = "RecipeSearchResultCell"
             static let nothingFoundCell = "NothingFoundCell"
+            static let loadingCell = "LoadingCell"
         }
     }
     
@@ -32,7 +33,12 @@ class RecipesViewController: UIViewController {
         cellNib = UINib(nibName:
             TableView.CellIdentifiers.nothingFoundCell, bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier:
-        TableView.CellIdentifiers.nothingFoundCell)
+            TableView.CellIdentifiers.nothingFoundCell)
+        
+        cellNib = UINib(nibName: TableView.CellIdentifiers.loadingCell,
+                        bundle: nil)
+        tableView.register(cellNib, forCellReuseIdentifier:
+            TableView.CellIdentifiers.loadingCell)
     }
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -45,6 +51,7 @@ class RecipesViewController: UIViewController {
             withAllowedCharacters: CharacterSet.urlQueryAllowed)!
         let urlString = String(format:
             "http://www.recipepuppy.com/api/?q=%@", encodedText)
+            // "http://www.recipepuppy.com/api/?q=%@&limit=200", encodedText) this is supposed to return more results but doesnt work
         let url = URL(string: urlString)
         return url!
     }
@@ -54,6 +61,7 @@ class RecipesViewController: UIViewController {
             return try Data(contentsOf: url)
         } catch {
             print("Download Error: \(error.localizedDescription)")
+            showNetworkError()
             return nil
         }
     }
@@ -66,6 +74,15 @@ class RecipesViewController: UIViewController {
         } catch {
             print("JSON Error: \(error)")
             return [] }
+    }
+    
+    func showNetworkError() {
+        let alert = UIAlertController(title: "Whoops...",
+                                      message: "There was an error accessing the Recipe database. Please try again.", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default,
+                                   handler: nil)
+        present(alert, animated: true, completion: nil)
+        alert.addAction(action)
     }
 }
 
@@ -80,8 +97,8 @@ extension RecipesViewController: UISearchBarDelegate {
             print("URL: '\(url)'")
 
             if let data = performRequest(with: url) {
-                let results = parse(data: data)
-                print("Got results: \(results)")
+                searchResults = parse(data: data)
+                 searchResults.sort(by: <)
             }
             tableView.reloadData()
         }
@@ -115,7 +132,7 @@ extension RecipesViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: TableView.CellIdentifiers.recipeSearchResultCell, for: indexPath) as! RecipeSearchResultCell
             let searchResult = searchResults[indexPath.row]
-            cell.nameLabel.text = searchResult.title
+            cell.nameLabel.text = searchResult.recipeName
            // cell.artistNameLabel.text = searchResult.artistName
             return cell
         }

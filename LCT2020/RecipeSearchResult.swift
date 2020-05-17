@@ -15,18 +15,32 @@ class ResultArray:Codable {
     var results = [RecipeSearchResult]()
 }
 class RecipeSearchResult:Codable, CustomStringConvertible {
-    var title: String? = ""
-    //var href: String? = ""
-   var ingredients: String? = ""
-  //  var thumbnail: String? = ""
-    
+    //do I/why give default values?
+    //var title: String? = ""
+    var recipeName = "" //dont think its an optional
+    var recipeLink: String? = ""
+    var ingredients: String? = ""
+    var thumbnail: String? = ""
    
     //var name:String {
     //    return  title ?? ""
     //}
     
+    enum CodingKeys: String, CodingKey {
+        case recipeName = "title"
+        case recipeLink = "href"
+        case ingredients, thumbnail
+    }
+    
+    
     var description: String {
-        return "Name: \(title ?? "None"), Ingredients: \(ingredients ?? "None")"
+        return "Name: \(recipeName), Link: \(recipeLink ?? "None"), Ingredients: \(ingredients ?? "None")"
+        //return "Name: \(title ?? "None"), Link: \(href ?? "None"), Ingredients: \(ingredients ?? "None")"
     }
 }
+
+func < (lhs: RecipeSearchResult, rhs: RecipeSearchResult) -> Bool {
+    return lhs.recipeName.localizedStandardCompare(rhs.recipeName) == .orderedAscending
+}
+
 
