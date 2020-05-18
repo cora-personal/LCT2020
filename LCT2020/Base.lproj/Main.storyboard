@@ -299,49 +299,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hP-88-9ci">
-                                <rect key="frame" x="118" y="180" width="64" height="21"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profilePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="acO-Yf-NG2">
+                                <rect key="frame" x="100" y="75" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLn-k0-lAW">
-                                <rect key="frame" x="112" y="209" width="77" height="30"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRX-oJ-dth">
+                                <rect key="frame" x="85" y="203" width="150" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="User Guide"/>
+                                <color key="backgroundColor" red="0.3313705623" green="0.88674461839999996" blue="0.063861556350000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="EDIT ACCOUNT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="K3k-fN-Tin" kind="show" id="CEW-I9-IpA"/>
+                                    <action selector="logInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ELI-uM-ed6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCE-CG-lhy">
-                                <rect key="frame" x="244" y="198" width="60" height="32"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xHn-7G-uu5">
+                                <rect key="frame" x="16" y="267" width="288" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Pte-LE-Wcr" id="pvM-UY-NQG"/>
+                                    <outlet property="delegate" destination="Pte-LE-Wcr" id="kPC-bi-AMF"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="rh4-xW-dY1"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Account" id="acJ-hr-mhK">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="2db-xR-dlA">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HCE-CG-lhy">
+                                <rect key="frame" x="244" y="6" width="60" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Out"/>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="This feature is currently under development " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ueq-aB-5AC">
-                                <rect key="frame" x="16" y="79" width="288" height="61"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="61" id="rXr-L1-dFE"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="rh4-xW-dY1" firstAttribute="trailing" secondItem="Ueq-aB-5AC" secondAttribute="trailing" constant="16" id="LGR-kQ-Y28"/>
-                            <constraint firstItem="Ueq-aB-5AC" firstAttribute="top" secondItem="rh4-xW-dY1" secondAttribute="top" constant="15" id="fzM-13-ZKu"/>
-                            <constraint firstItem="Ueq-aB-5AC" firstAttribute="leading" secondItem="rh4-xW-dY1" secondAttribute="leading" constant="16" id="u3y-PO-XxG"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="rh4-xW-dY1"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Account" id="acJ-hr-mhK"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="accountTableView" destination="xHn-7G-uu5" id="5N6-1D-tg1"/>
+                        <outlet property="editAccountButton" destination="DRX-oJ-dth" id="Um4-w4-3eT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y40-yq-P8T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3287" y="1214"/>
+            <point key="canvasLocation" x="3286.875" y="1213.7323943661972"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="fu6-1m-Osi">
@@ -627,5 +635,6 @@ Lydia coaches at various clubs in Liverpool and the Wirral so be sure to book on
         <image name="Logo-small" width="169" height="52"/>
         <image name="RecipeImage" width="23" height="21"/>
         <image name="logo" width="185" height="123"/>
+        <image name="profilePlaceholder" width="250" height="250"/>
     </resources>
 </document>

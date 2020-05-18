@@ -26,8 +26,6 @@ class RecipesViewController: UIViewController {
         } else if segmentedControl.selectedSegmentIndex == 1 {
             searchBar.placeholder = "Search for a recipe by ‘leftover ingredients’"
         }
-        
-        
         performSearch()
     }
     
