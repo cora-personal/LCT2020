@@ -10,7 +10,7 @@ import UIKit
 
 class RecipesViewController: UIViewController {
     
-    var searchResults = [RecipeSearchResult]()
+   var searchResults = [RecipeSearchResult]()
     var hasSearched = false
     var isLoading = false
     var dataTask: URLSessionDataTask?
@@ -255,3 +255,15 @@ class RecipeViewController: UIViewController {
     */
 
 }
+
+//override func viewDidLoad() {
+ //   super.viewDidLoad()
+//    
+//    let path = Bundle.main.path(forResource: "TableData", ofType: "plist")!
+//    let dict = NSDictionary(contentsOfFile: path)
+//    
+//    tableData = dict!.object(forKey: "AppleDevice") as! [String]
+//}
+//cell for row at
+//cell.textLabel!.text = tableData[indexPath.row]
+

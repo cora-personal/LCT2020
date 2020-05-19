@@ -17,6 +17,9 @@
 		367F888824058D390004EEC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 367F888624058D390004EEC7 /* Main.storyboard */; };
 		367F888A24058D3A0004EEC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 367F888924058D3A0004EEC7 /* Assets.xcassets */; };
 		367F888D24058D3A0004EEC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 367F888B24058D3A0004EEC7 /* LaunchScreen.storyboard */; };
+		3681A24C2472FAE200506EB7 /* LCT2020Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3681A24B2472FAE200506EB7 /* LCT2020Tests.swift */; };
+		3681A2572472FB7A00506EB7 /* RecipeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3681A2562472FB7A00506EB7 /* RecipeViewControllerTests.swift */; };
+		3681A2592473072F00506EB7 /* test_LCT2020.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3681A2582473072F00506EB7 /* test_LCT2020.plist */; };
 		36C8EAD724686A41000FC295 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C8EAD624686A41000FC295 /* SessionViewController.swift */; };
 		36C8EADB24686B65000FC295 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C8EADA24686B65000FC295 /* HomeViewController.swift */; };
 		36C8EADD24686B9B000FC295 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C8EADC24686B9B000FC295 /* AccountViewController.swift */; };
@@ -27,6 +30,16 @@
 		36E6DADE246F07DA000537B9 /* RecipeSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E6DADD246F07DA000537B9 /* RecipeSearchResultCell.swift */; };
 		36E6DAE0246F1B51000537B9 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36E6DADF246F1B51000537B9 /* NothingFoundCell.xib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3681A24E2472FAE200506EB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 367F887724058D390004EEC7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 367F887E24058D390004EEC7;
+			remoteInfo = LCT2020;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		360885BB246377A80029B36D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +54,11 @@
 		367F888924058D3A0004EEC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		367F888C24058D3A0004EEC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		367F888E24058D3A0004EEC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3681A2492472FAE200506EB7 /* LCT2020Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LCT2020Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3681A24B2472FAE200506EB7 /* LCT2020Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCT2020Tests.swift; sourceTree = "<group>"; };
+		3681A24D2472FAE200506EB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3681A2562472FB7A00506EB7 /* RecipeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewControllerTests.swift; sourceTree = "<group>"; };
+		3681A2582473072F00506EB7 /* test_LCT2020.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = test_LCT2020.plist; path = "../../../Downloads/02-Test-Basics/Demo-Completed/Resources/test_LCT2020.plist"; sourceTree = "<group>"; };
 		36C8EAD624686A41000FC295 /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
 		36C8EADA24686B65000FC295 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		36C8EADC24686B9B000FC295 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +78,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3681A2462472FAE200506EB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -67,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				367F888124058D390004EEC7 /* LCT2020 */,
+				3681A24A2472FAE200506EB7 /* LCT2020Tests */,
 				367F888024058D390004EEC7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				367F887F24058D390004EEC7 /* LCT2020.app */,
+				3681A2492472FAE200506EB7 /* LCT2020Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,6 +133,41 @@
 			path = LCT2020;
 			sourceTree = "<group>";
 		};
+		3681A24A2472FAE200506EB7 /* LCT2020Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3681A24B2472FAE200506EB7 /* LCT2020Tests.swift */,
+				3681A2552472FB2C00506EB7 /* Cases */,
+				3681A2542472FB1400506EB7 /* SupportingFiles */,
+				3681A2582473072F00506EB7 /* test_LCT2020.plist */,
+				3681A2532472FB0A00506EB7 /* Data */,
+				3681A24D2472FAE200506EB7 /* Info.plist */,
+			);
+			path = LCT2020Tests;
+			sourceTree = "<group>";
+		};
+		3681A2532472FB0A00506EB7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3681A2542472FB1400506EB7 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		3681A2552472FB2C00506EB7 /* Cases */ = {
+			isa = PBXGroup;
+			children = (
+				3681A2562472FB7A00506EB7 /* RecipeViewControllerTests.swift */,
+			);
+			path = Cases;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,6 +188,24 @@
 			productReference = 367F887F24058D390004EEC7 /* LCT2020.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3681A2482472FAE200506EB7 /* LCT2020Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3681A2522472FAE200506EB7 /* Build configuration list for PBXNativeTarget "LCT2020Tests" */;
+			buildPhases = (
+				3681A2452472FAE200506EB7 /* Sources */,
+				3681A2462472FAE200506EB7 /* Frameworks */,
+				3681A2472472FAE200506EB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3681A24F2472FAE200506EB7 /* PBXTargetDependency */,
+			);
+			name = LCT2020Tests;
+			productName = LCT2020Tests;
+			productReference = 3681A2492472FAE200506EB7 /* LCT2020Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -138,6 +218,10 @@
 				TargetAttributes = {
 					367F887E24058D390004EEC7 = {
 						CreatedOnToolsVersion = 10.2.1;
+					};
+					3681A2482472FAE200506EB7 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 367F887E24058D390004EEC7;
 					};
 				};
 			};
@@ -155,6 +239,7 @@
 			projectRoot = "";
 			targets = (
 				367F887E24058D390004EEC7 /* LCT2020 */,
+				3681A2482472FAE200506EB7 /* LCT2020Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -170,6 +255,14 @@
 				367F888A24058D3A0004EEC7 /* Assets.xcassets in Resources */,
 				36E6DAE0246F1B51000537B9 /* NothingFoundCell.xib in Resources */,
 				367F888824058D390004EEC7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3681A2472472FAE200506EB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3681A2592473072F00506EB7 /* test_LCT2020.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,7 +289,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3681A2452472FAE200506EB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3681A2572472FB7A00506EB7 /* RecipeViewControllerTests.swift in Sources */,
+				3681A24C2472FAE200506EB7 /* LCT2020Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3681A24F2472FAE200506EB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 367F887E24058D390004EEC7 /* LCT2020 */;
+			targetProxy = 3681A24E2472FAE200506EB7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		367F888624058D390004EEC7 /* Main.storyboard */ = {
@@ -370,6 +480,46 @@
 			};
 			name = Release;
 		};
+		3681A2502472FAE200506EB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B3WP3486F4;
+				INFOPLIST_FILE = LCT2020Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cora.LCT2020Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LCT2020.app/LCT2020";
+			};
+			name = Debug;
+		};
+		3681A2512472FAE200506EB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B3WP3486F4;
+				INFOPLIST_FILE = LCT2020Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cora.LCT2020Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LCT2020.app/LCT2020";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -387,6 +537,15 @@
 			buildConfigurations = (
 				367F889224058D3A0004EEC7 /* Debug */,
 				367F889324058D3A0004EEC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3681A2522472FAE200506EB7 /* Build configuration list for PBXNativeTarget "LCT2020Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3681A2502472FAE200506EB7 /* Debug */,
+				3681A2512472FAE200506EB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
