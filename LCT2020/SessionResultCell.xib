@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="1Nd-jl-owE" customClass="SessionResultCell" customModule="LCT2020" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Nd-jl-owE" id="k0E-5j-DIW">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="119.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nl2-l1-Pe0">
+                        <rect key="frame" x="14" y="7" width="292" height="105.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbr-WK-mCE">
+                                <rect key="frame" x="0.0" y="22" width="292" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBO-oM-ng9">
+                                <rect key="frame" x="0.0" y="40" width="292" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yzw-uE-SKg">
+                                <rect key="frame" x="0.0" y="61" width="292" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRM-x7-wEP">
+                                <rect key="frame" x="0.0" y="80" width="290" height="19.5"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
+                                <color key="textColor" name="green"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Session" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3Q-hS-RwP">
+                                <rect key="frame" x="0.0" y="0.0" width="292" height="23"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kRM-x7-wEP" firstAttribute="top" secondItem="BBO-oM-ng9" secondAttribute="bottom" constant="19" id="2Uj-5b-vO9"/>
+                            <constraint firstAttribute="trailing" secondItem="Wbr-WK-mCE" secondAttribute="trailing" id="5iW-g5-TPS"/>
+                            <constraint firstItem="BBO-oM-ng9" firstAttribute="leading" secondItem="nl2-l1-Pe0" secondAttribute="leading" id="8Bu-Bc-szC"/>
+                            <constraint firstItem="BBO-oM-ng9" firstAttribute="top" secondItem="q3Q-hS-RwP" secondAttribute="bottom" constant="17" id="8dC-lF-LFD"/>
+                            <constraint firstItem="Wbr-WK-mCE" firstAttribute="leading" secondItem="nl2-l1-Pe0" secondAttribute="leading" id="C3S-Pi-iJL"/>
+                            <constraint firstItem="q3Q-hS-RwP" firstAttribute="leading" secondItem="nl2-l1-Pe0" secondAttribute="leading" id="Llx-hj-09G"/>
+                            <constraint firstItem="Yzw-uE-SKg" firstAttribute="leading" secondItem="nl2-l1-Pe0" secondAttribute="leading" id="MIz-Uc-rre"/>
+                            <constraint firstItem="q3Q-hS-RwP" firstAttribute="top" secondItem="nl2-l1-Pe0" secondAttribute="top" id="Oum-1H-wYz"/>
+                            <constraint firstAttribute="trailing" secondItem="Yzw-uE-SKg" secondAttribute="trailing" id="S85-4d-4EM"/>
+                            <constraint firstItem="Yzw-uE-SKg" firstAttribute="top" secondItem="BBO-oM-ng9" secondAttribute="bottom" id="TOu-lx-Kls"/>
+                            <constraint firstItem="Wbr-WK-mCE" firstAttribute="top" secondItem="nl2-l1-Pe0" secondAttribute="top" constant="22" id="VMV-Gh-795"/>
+                            <constraint firstAttribute="trailing" secondItem="q3Q-hS-RwP" secondAttribute="trailing" id="XDG-k9-6pB"/>
+                            <constraint firstAttribute="trailing" secondItem="kRM-x7-wEP" secondAttribute="trailing" constant="2" id="XVs-lP-2zT"/>
+                            <constraint firstItem="kRM-x7-wEP" firstAttribute="leading" secondItem="nl2-l1-Pe0" secondAttribute="leading" id="a6f-xl-i2e"/>
+                            <constraint firstAttribute="height" constant="105.5" id="b7U-Xl-Ena"/>
+                            <constraint firstItem="Yzw-uE-SKg" firstAttribute="top" secondItem="BBO-oM-ng9" secondAttribute="bottom" id="bt9-dm-myk"/>
+                            <constraint firstItem="Yzw-uE-SKg" firstAttribute="leading" secondItem="nl2-l1-Pe0" secondAttribute="leading" id="iQZ-Gg-qFl"/>
+                            <constraint firstAttribute="trailing" secondItem="Yzw-uE-SKg" secondAttribute="trailing" id="m0c-pD-vZx"/>
+                            <constraint firstAttribute="trailing" secondItem="BBO-oM-ng9" secondAttribute="trailing" id="wlT-Vk-7OH"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="nl2-l1-Pe0" secondAttribute="bottom" constant="7" id="0et-ww-zTf"/>
+                    <constraint firstItem="nl2-l1-Pe0" firstAttribute="top" secondItem="k0E-5j-DIW" secondAttribute="top" constant="7" id="6nO-f2-H7F"/>
+                    <constraint firstAttribute="trailing" secondItem="nl2-l1-Pe0" secondAttribute="trailing" constant="14" id="Cyb-WD-IOk"/>
+                    <constraint firstItem="nl2-l1-Pe0" firstAttribute="leading" secondItem="k0E-5j-DIW" secondAttribute="leading" constant="14" id="xjL-03-AVW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="addressLabel" destination="kRM-x7-wEP" id="k2O-Pu-KhM"/>
+                <outlet property="dateLabel" destination="BBO-oM-ng9" id="IBh-GE-aSP"/>
+                <outlet property="priceLabel" destination="Yzw-uE-SKg" id="7FN-kc-S2O"/>
+                <outlet property="sessionNameLabel" destination="q3Q-hS-RwP" id="Zs2-6f-tRK"/>
+                <outlet property="timeLabel" destination="Wbr-WK-mCE" id="KYy-34-8Ma"/>
+            </connections>
+            <point key="canvasLocation" x="47.826086956521742" y="71.651785714285708"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="green">
+            <color red="0.19607843137254902" green="0.84313725490196079" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

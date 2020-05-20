@@ -20,6 +20,8 @@
 		3681A24C2472FAE200506EB7 /* LCT2020Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3681A24B2472FAE200506EB7 /* LCT2020Tests.swift */; };
 		3681A2572472FB7A00506EB7 /* RecipeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3681A2562472FB7A00506EB7 /* RecipeViewControllerTests.swift */; };
 		3681A2592473072F00506EB7 /* test_LCT2020.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3681A2582473072F00506EB7 /* test_LCT2020.plist */; };
+		36BAE80924744C4C0054AD21 /* SessionResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36BAE80824744C4C0054AD21 /* SessionResultCell.xib */; };
+		36BAE80D247450E00054AD21 /* SessionResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BAE80C247450E00054AD21 /* SessionResultCell.swift */; };
 		36C8EAD724686A41000FC295 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C8EAD624686A41000FC295 /* SessionViewController.swift */; };
 		36C8EADB24686B65000FC295 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C8EADA24686B65000FC295 /* HomeViewController.swift */; };
 		36C8EADD24686B9B000FC295 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C8EADC24686B9B000FC295 /* AccountViewController.swift */; };
@@ -29,6 +31,8 @@
 		36E6DADC246EFEEB000537B9 /* RecipeSearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36E6DADB246EFEEB000537B9 /* RecipeSearchResultCell.xib */; };
 		36E6DADE246F07DA000537B9 /* RecipeSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E6DADD246F07DA000537B9 /* RecipeSearchResultCell.swift */; };
 		36E6DAE0246F1B51000537B9 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36E6DADF246F1B51000537B9 /* NothingFoundCell.xib */; };
+		36FDCCA524747CAB008BECC1 /* SessionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FDCCA424747CAB008BECC1 /* SessionDetailViewController.swift */; };
+		36FDCCA7247482FB008BECC1 /* SessionSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FDCCA6247482FB008BECC1 /* SessionSearchResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,8 @@
 		3681A24D2472FAE200506EB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3681A2562472FB7A00506EB7 /* RecipeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewControllerTests.swift; sourceTree = "<group>"; };
 		3681A2582473072F00506EB7 /* test_LCT2020.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = test_LCT2020.plist; path = "../../../Downloads/02-Test-Basics/Demo-Completed/Resources/test_LCT2020.plist"; sourceTree = "<group>"; };
+		36BAE80824744C4C0054AD21 /* SessionResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SessionResultCell.xib; sourceTree = "<group>"; };
+		36BAE80C247450E00054AD21 /* SessionResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionResultCell.swift; sourceTree = "<group>"; };
 		36C8EAD624686A41000FC295 /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
 		36C8EADA24686B65000FC295 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		36C8EADC24686B9B000FC295 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +74,8 @@
 		36E6DADB246EFEEB000537B9 /* RecipeSearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeSearchResultCell.xib; sourceTree = "<group>"; };
 		36E6DADD246F07DA000537B9 /* RecipeSearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSearchResultCell.swift; sourceTree = "<group>"; };
 		36E6DADF246F1B51000537B9 /* NothingFoundCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
+		36FDCCA424747CAB008BECC1 /* SessionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDetailViewController.swift; sourceTree = "<group>"; };
+		36FDCCA6247482FB008BECC1 /* SessionSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionSearchResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,12 +117,15 @@
 		367F888124058D390004EEC7 /* LCT2020 */ = {
 			isa = PBXGroup;
 			children = (
+				36BAE80C247450E00054AD21 /* SessionResultCell.swift */,
 				36E6DADF246F1B51000537B9 /* NothingFoundCell.xib */,
 				36E6DADB246EFEEB000537B9 /* RecipeSearchResultCell.xib */,
+				36BAE80824744C4C0054AD21 /* SessionResultCell.xib */,
 				367F888224058D390004EEC7 /* AppDelegate.swift */,
 				367F888424058D390004EEC7 /* SignInViewController.swift */,
 				367F888624058D390004EEC7 /* Main.storyboard */,
 				36E6DAD7246EF3F7000537B9 /* RecipeSearchResult.swift */,
+				36FDCCA6247482FB008BECC1 /* SessionSearchResult.swift */,
 				367864C72471CD3100197E04 /* UIImageView+DownloadImage.swift */,
 				36C8EADA24686B65000FC295 /* HomeViewController.swift */,
 				36C8EAD624686A41000FC295 /* SessionViewController.swift */,
@@ -127,6 +138,7 @@
 				360885BB246377A80029B36D /* RegisterViewController.swift */,
 				367F888924058D3A0004EEC7 /* Assets.xcassets */,
 				367864C92471DE9500197E04 /* RecipeDetailViewController.swift */,
+				36FDCCA424747CAB008BECC1 /* SessionDetailViewController.swift */,
 				367F888B24058D3A0004EEC7 /* LaunchScreen.storyboard */,
 				367F888E24058D3A0004EEC7 /* Info.plist */,
 			);
@@ -253,6 +265,7 @@
 				367F888D24058D3A0004EEC7 /* LaunchScreen.storyboard in Resources */,
 				367864C62471A5D900197E04 /* LoadingCell.xib in Resources */,
 				367F888A24058D3A0004EEC7 /* Assets.xcassets in Resources */,
+				36BAE80924744C4C0054AD21 /* SessionResultCell.xib in Resources */,
 				36E6DAE0246F1B51000537B9 /* NothingFoundCell.xib in Resources */,
 				367F888824058D390004EEC7 /* Main.storyboard in Resources */,
 			);
@@ -275,6 +288,7 @@
 			files = (
 				367864CA2471DE9500197E04 /* RecipeDetailViewController.swift in Sources */,
 				360885BE2464A1D90029B36D /* DesignableView.swift in Sources */,
+				36BAE80D247450E00054AD21 /* SessionResultCell.swift in Sources */,
 				36CA5A622466156F00327CDA /* MainTabController.swift in Sources */,
 				36E6DAD8246EF3F7000537B9 /* RecipeSearchResult.swift in Sources */,
 				367F888524058D390004EEC7 /* SignInViewController.swift in Sources */,
@@ -285,6 +299,8 @@
 				367864C82471CD3100197E04 /* UIImageView+DownloadImage.swift in Sources */,
 				367F888324058D390004EEC7 /* AppDelegate.swift in Sources */,
 				36C8EAD724686A41000FC295 /* SessionViewController.swift in Sources */,
+				36FDCCA7247482FB008BECC1 /* SessionSearchResult.swift in Sources */,
+				36FDCCA524747CAB008BECC1 /* SessionDetailViewController.swift in Sources */,
 				360885BC246377A80029B36D /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
