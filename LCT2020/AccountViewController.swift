@@ -10,16 +10,27 @@ import UIKit
 
 class AccountViewController: UIViewController {
 
-    
-    @IBOutlet weak var editAccountButton: UIButton!
-    
-    @IBOutlet weak var accountTableView: UITableView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         //title = "Account" //made that change in storybaord
         // Do any additional setup after loading the view.
     }
+    
+    
+
+    
+    @IBAction func signOuthandler(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func editAccountbutton(_ sender: Any) {
+         performSegue(withIdentifier: "EditAccount", sender: sender)
+        
+    }
+    
+    @IBOutlet weak var editAccountButton: UIButton!
+    
+    @IBOutlet weak var accountTableView: UITableView!
 
 }
 
@@ -51,8 +62,18 @@ extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-//        if indexPath = 0 {
-//        performSegue(withIdentifier: "ShowDetail", sender: indexPath)
+       if indexPath.row == 0 {
+            let linkURL = "https://www.youtube.com/"
+            if let url = NSURL(string: linkURL) {
+                UIApplication.shared.openURL(url as URL)
+            }
+        } else if indexPath.row == 1 {
+         performSegue(withIdentifier: "ChangePassword", sender: indexPath)
+        
+            
+        }
+        
+//
 //        }
     }
     

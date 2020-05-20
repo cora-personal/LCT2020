@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		360885BC246377A80029B36D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360885BB246377A80029B36D /* RegisterViewController.swift */; };
 		360885BE2464A1D90029B36D /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360885BD2464A1D90029B36D /* DesignableView.swift */; };
+		36492BC424755B05000B65D0 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36492BC324755B05000B65D0 /* ChangePasswordViewController.swift */; };
 		367864C62471A5D900197E04 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 367864C52471A5D900197E04 /* LoadingCell.xib */; };
 		367864C82471CD3100197E04 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367864C72471CD3100197E04 /* UIImageView+DownloadImage.swift */; };
 		367864CA2471DE9500197E04 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367864C92471DE9500197E04 /* RecipeDetailViewController.swift */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		360885BB246377A80029B36D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		360885BD2464A1D90029B36D /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		36492BC324755B05000B65D0 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		367864C52471A5D900197E04 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		367864C72471CD3100197E04 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 		367864C92471DE9500197E04 /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				36C8EAD624686A41000FC295 /* SessionViewController.swift */,
 				367864C52471A5D900197E04 /* LoadingCell.xib */,
 				36C8EADC24686B9B000FC295 /* AccountViewController.swift */,
+				36492BC324755B05000B65D0 /* ChangePasswordViewController.swift */,
 				36C8EADE24686C08000FC295 /* RecipesViewController.swift */,
 				36E6DADD246F07DA000537B9 /* RecipeSearchResultCell.swift */,
 				36CA5A612466156F00327CDA /* MainTabController.swift */,
@@ -298,6 +301,7 @@
 				36E6DADE246F07DA000537B9 /* RecipeSearchResultCell.swift in Sources */,
 				367864C82471CD3100197E04 /* UIImageView+DownloadImage.swift in Sources */,
 				367F888324058D390004EEC7 /* AppDelegate.swift in Sources */,
+				36492BC424755B05000B65D0 /* ChangePasswordViewController.swift in Sources */,
 				36C8EAD724686A41000FC295 /* SessionViewController.swift in Sources */,
 				36FDCCA7247482FB008BECC1 /* SessionSearchResult.swift in Sources */,
 				36FDCCA524747CAB008BECC1 /* SessionDetailViewController.swift in Sources */,

@@ -18,6 +18,9 @@ class SignInViewController: UIViewController {
     }
     
     
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     func validateFields() -> Bool { // func validateFields() -> String
         let test = true
         return test
@@ -35,6 +38,9 @@ class SignInViewController: UIViewController {
            // performSegue(withIdentifier: "SuccessfulLogIn", sender: self)
             
             present(mainTabController, animated: true, completion: nil)
+            emailTextField.text = ""
+            passwordTextField.text = ""
+            
             
         } else {
             let alert = UIAlertController(title: "Password Incorrect",
