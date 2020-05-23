@@ -424,7 +424,6 @@
         <!--View Controller-->
         <scene sceneID="Qp4-8L-fPM">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="M7p-E8-4NM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="DqL-Cy-obH" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bKe-mB-9PQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -458,6 +457,7 @@
                         <viewLayoutGuide key="safeArea" id="4Yr-7m-jG1"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M7p-E8-4NM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5829" y="431"/>
         </scene>
@@ -685,7 +685,7 @@
         <!--View Controller-->
         <scene sceneID="mu0-ad-JT9">
             <objects>
-                <viewController id="hP7-ic-IiL" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="hP7-ic-IiL" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W8S-o4-dQv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

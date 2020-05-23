@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     // MARK:- Helper Methods
-    func customizeAppearance() {
+    func customiseAppearance() {
         let barTintColor = UIColor.init(named: "pale grey")
         UINavigationBar.appearance().barTintColor = barTintColor
         UISearchBar.appearance().barTintColor = barTintColor
@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        customizeAppearance()
+        customiseAppearance()
         return true
     }
 
