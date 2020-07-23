@@ -11,7 +11,8 @@ import UIKit
 
 class SessionViewController: UIViewController {
     
-   var sessionResults = [SessionResult]()
+    //var sessionResults: [SessionSearchResult]!
+    var sessionResults = [SessionSearchResult]()
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -34,15 +35,15 @@ class SessionViewController: UIViewController {
         tableView.register(cellNib, forCellReuseIdentifier:
             TableView.CellIdentifiers.sessionResultCell)
         
-        let result1 = SessionResult()
+        var result1 = SessionSearchResult()
             result1.sessionName = "LCT Extreme"
             result1.time = "12:00 - 13:00"
             result1.date = "Sun, 01 Mar 2020"
             result1.price = "£ 6.50"
             result1.address = "Sefton Park Liverpool, Lancashire, L17 1AP"
             sessionResults.append(result1)
-            
-        let result2 = SessionResult()
+        
+        var result2 = SessionSearchResult()
             result2.sessionName = "Mersey Bowmen Tennis Session"
             result2.time = "17:00 - 18.30"
             result2.date = "Sat, 29 Feb 2020"
@@ -50,7 +51,7 @@ class SessionViewController: UIViewController {
             result2.address = "Mersey Bowmen LTC, Liverpool, L17 1AP"
             sessionResults.append(result2)
         
-        let result3 = SessionResult()
+        var result3 = SessionSearchResult()
             result3.sessionName = "Mersey Bowmen Tennis Session"
             result3.time = "17:00 - 18.30"
             result3.date = "Sat, 29 Feb 2020"
@@ -58,7 +59,7 @@ class SessionViewController: UIViewController {
             result3.address = "Mersey Bowmen LTC, Liverpool, L17 1AP"
             sessionResults.append(result3)
         
-        let result4 = SessionResult()
+        var result4 = SessionSearchResult()
             result4.sessionName = "Mersey Bowmen Tennis Session"
             result4.time = "17:00 - 18.30"
             result4.date = "Sun, 08 Mar 2020"
@@ -84,7 +85,7 @@ extension SessionViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
         
-        return 4 //sessionResults.count
+        return sessionResults.count
     }
     
     func tableView(_ tableView: UITableView,
@@ -115,8 +116,9 @@ extension SessionViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         
-    return indexPath
+        return indexPath
         }
+    
 }
 
 

@@ -15,29 +15,21 @@ class ChangePasswordViewController: UIViewController {
         self.oldPasswordTextField.text = ""
         self.newPasswordTextField.text = ""
         self.confirmPasswordTextField.text = ""
-
-        // Do any additional setup after loading the view.
     }
+    
     @IBOutlet weak var oldPasswordTextField: UITextField!
     @IBOutlet weak var newPasswordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var submitButton: UIButton!
     
-    
-    
     @IBAction func submitButtonTapped(_ sender: Any) {
         
         submitButton.isEnabled = false
-       // if oldPasswordTextField.text !== ""
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                    self.submitButton.backgroundColor = UIColor.init(named: "pale grey")
-                    self.submitButton.setTitle("DONE", for: .disabled)
-                    self.submitButton.setTitleColor(UIColor.init(named: "green"), for: .disabled)
-                }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                self.submitButton.backgroundColor = UIColor.init(named: "pale grey")
+                self.submitButton.setTitle("DONE", for: .disabled)
+                self.submitButton.setTitleColor(UIColor.init(named: "green"), for: .disabled)
+        }
     }
             
-}
-
-extension ChangePasswordViewController : UITextFieldDelegate {
-    
 }

@@ -39,7 +39,6 @@ class RecipesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //title = "Recipe" //made this change in storyboard
         tableView.contentInset = UIEdgeInsets(top: 98, left: 0,
                                               bottom: 0, right: 0)
         var cellNib = UINib(nibName: TableView.CellIdentifiers.recipeSearchResultCell, bundle: nil)
@@ -80,12 +79,10 @@ class RecipesViewController: UIViewController {
         default: kind = "q="
         }
         
-        //let searchText = searchText.replacingOccurrences(of: " ", with: "")
         let encodedText = searchText.addingPercentEncoding(
             withAllowedCharacters: CharacterSet.urlQueryAllowed)!
         let urlString = String(format:
             "http://www.recipepuppy.com/api/?\(kind)%@", encodedText)
-            // "http://www.recipepuppy.com/api/?q=%@&limit=200", encodedText) this is supposed to return more results but doesnt work
         print(urlString)
         let url = URL(string: urlString)
         
@@ -196,8 +193,6 @@ extension RecipesViewController: UITableViewDelegate, UITableViewDataSource {
             let searchResult = searchResults[indexPath.row]
             cell.configure(for: searchResult)
             return cell
-            //cell.nameLabel.text = searchResult.recipeName //MOVED TO CELL
-           // cell.artistNameLabel.text = searchResult.artistName
         }
         
     }

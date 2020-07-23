@@ -12,25 +12,16 @@ class AccountViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //title = "Account" //made that change in storybaord
-        // Do any additional setup after loading the view.
-    }
-    
-    
-
-    
-    @IBAction func signOuthandler(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func editAccountbutton(_ sender: Any) {
-         performSegue(withIdentifier: "EditAccount", sender: sender)
-        
     }
     
     @IBOutlet weak var editAccountButton: UIButton!
-    
     @IBOutlet weak var accountTableView: UITableView!
+    @IBAction func signOuthandler(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    @IBAction func editAccountbutton(_ sender: Any) {
+         performSegue(withIdentifier: "EditAccount", sender: sender)
+    }
 
 }
 
@@ -56,7 +47,6 @@ extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
             cell.textLabel!.text = "Change Password"
         }
         return cell
-       
     }
     
     func tableView(_ tableView: UITableView,
@@ -67,14 +57,9 @@ extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
             if let url = NSURL(string: linkURL) {
                 UIApplication.shared.openURL(url as URL)
             }
-        } else if indexPath.row == 1 {
+       } else if indexPath.row == 1 {
          performSegue(withIdentifier: "ChangePassword", sender: indexPath)
-        
-            
         }
-        
-//
-//        }
     }
     
     func tableView(_ tableView: UITableView,
@@ -82,6 +67,5 @@ extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
         
             return indexPath
     }
-
 }
 

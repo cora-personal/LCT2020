@@ -3,16 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		274AEE7ACE96F35792CA3569 /* Pods_LCT2020.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E103DA28796DD7A01A55A6 /* Pods_LCT2020.framework */; };
 		360885BC246377A80029B36D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360885BB246377A80029B36D /* RegisterViewController.swift */; };
 		360885BE2464A1D90029B36D /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360885BD2464A1D90029B36D /* DesignableView.swift */; };
 		36492BC424755B05000B65D0 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36492BC324755B05000B65D0 /* ChangePasswordViewController.swift */; };
 		367864C62471A5D900197E04 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 367864C52471A5D900197E04 /* LoadingCell.xib */; };
 		367864C82471CD3100197E04 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367864C72471CD3100197E04 /* UIImageView+DownloadImage.swift */; };
 		367864CA2471DE9500197E04 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367864C92471DE9500197E04 /* RecipeDetailViewController.swift */; };
+		367F4BBD2479512B00B60964 /* TrialSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367F4BBC2479512B00B60964 /* TrialSignInViewController.swift */; };
+		367F4BBF247952C900B60964 /* TrialTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367F4BBE247952C900B60964 /* TrialTableViewController.swift */; };
 		367F888324058D390004EEC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367F888224058D390004EEC7 /* AppDelegate.swift */; };
 		367F888524058D390004EEC7 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367F888424058D390004EEC7 /* SignInViewController.swift */; };
 		367F888824058D390004EEC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 367F888624058D390004EEC7 /* Main.storyboard */; };
@@ -21,6 +24,7 @@
 		3681A24C2472FAE200506EB7 /* LCT2020Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3681A24B2472FAE200506EB7 /* LCT2020Tests.swift */; };
 		3681A2572472FB7A00506EB7 /* RecipeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3681A2562472FB7A00506EB7 /* RecipeViewControllerTests.swift */; };
 		3681A2592473072F00506EB7 /* test_LCT2020.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3681A2582473072F00506EB7 /* test_LCT2020.plist */; };
+		36926557247A98EC002D04E0 /* SessionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36926556247A98EC002D04E0 /* SessionResponse.swift */; };
 		36BAE80924744C4C0054AD21 /* SessionResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36BAE80824744C4C0054AD21 /* SessionResultCell.xib */; };
 		36BAE80D247450E00054AD21 /* SessionResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BAE80C247450E00054AD21 /* SessionResultCell.swift */; };
 		36C8EAD724686A41000FC295 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C8EAD624686A41000FC295 /* SessionViewController.swift */; };
@@ -34,6 +38,7 @@
 		36E6DAE0246F1B51000537B9 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36E6DADF246F1B51000537B9 /* NothingFoundCell.xib */; };
 		36FDCCA524747CAB008BECC1 /* SessionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FDCCA424747CAB008BECC1 /* SessionDetailViewController.swift */; };
 		36FDCCA7247482FB008BECC1 /* SessionSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FDCCA6247482FB008BECC1 /* SessionSearchResult.swift */; };
+		EA8E60924EA292BEEBFE8728 /* Pods_LCT2020Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FD50CA41E133580C3D11D9E /* Pods_LCT2020Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,12 +52,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13974303E7FD3E05C135A4D8 /* Pods-LCT2020Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCT2020Tests.debug.xcconfig"; path = "Target Support Files/Pods-LCT2020Tests/Pods-LCT2020Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		22E103DA28796DD7A01A55A6 /* Pods_LCT2020.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LCT2020.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		360885BB246377A80029B36D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		360885BD2464A1D90029B36D /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		36492BC324755B05000B65D0 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		367864C52471A5D900197E04 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		367864C72471CD3100197E04 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 		367864C92471DE9500197E04 /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
+		367F4BBC2479512B00B60964 /* TrialSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialSignInViewController.swift; sourceTree = "<group>"; };
+		367F4BBE247952C900B60964 /* TrialTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialTableViewController.swift; sourceTree = "<group>"; };
 		367F887F24058D390004EEC7 /* LCT2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LCT2020.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		367F888224058D390004EEC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		367F888424058D390004EEC7 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +74,7 @@
 		3681A24D2472FAE200506EB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3681A2562472FB7A00506EB7 /* RecipeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewControllerTests.swift; sourceTree = "<group>"; };
 		3681A2582473072F00506EB7 /* test_LCT2020.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = test_LCT2020.plist; path = "../../../Downloads/02-Test-Basics/Demo-Completed/Resources/test_LCT2020.plist"; sourceTree = "<group>"; };
+		36926556247A98EC002D04E0 /* SessionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionResponse.swift; sourceTree = "<group>"; };
 		36BAE80824744C4C0054AD21 /* SessionResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SessionResultCell.xib; sourceTree = "<group>"; };
 		36BAE80C247450E00054AD21 /* SessionResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionResultCell.swift; sourceTree = "<group>"; };
 		36C8EAD624686A41000FC295 /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +88,10 @@
 		36E6DADF246F1B51000537B9 /* NothingFoundCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 		36FDCCA424747CAB008BECC1 /* SessionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDetailViewController.swift; sourceTree = "<group>"; };
 		36FDCCA6247482FB008BECC1 /* SessionSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionSearchResult.swift; sourceTree = "<group>"; };
+		4BD1FD9AC4A5A47DE7E774DF /* Pods-LCT2020.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCT2020.debug.xcconfig"; path = "Target Support Files/Pods-LCT2020/Pods-LCT2020.debug.xcconfig"; sourceTree = "<group>"; };
+		7FD50CA41E133580C3D11D9E /* Pods_LCT2020Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LCT2020Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A792E6341523974E95E74A1 /* Pods-LCT2020Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCT2020Tests.release.xcconfig"; path = "Target Support Files/Pods-LCT2020Tests/Pods-LCT2020Tests.release.xcconfig"; sourceTree = "<group>"; };
+		EA95679115A2E2EAD2CFCEF2 /* Pods-LCT2020.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCT2020.release.xcconfig"; path = "Target Support Files/Pods-LCT2020/Pods-LCT2020.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				274AEE7ACE96F35792CA3569 /* Pods_LCT2020.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,18 +107,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA8E60924EA292BEEBFE8728 /* Pods_LCT2020Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B4666AD38F333DC81BB946F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22E103DA28796DD7A01A55A6 /* Pods_LCT2020.framework */,
+				7FD50CA41E133580C3D11D9E /* Pods_LCT2020Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		357B945C3870452214497CA0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4BD1FD9AC4A5A47DE7E774DF /* Pods-LCT2020.debug.xcconfig */,
+				EA95679115A2E2EAD2CFCEF2 /* Pods-LCT2020.release.xcconfig */,
+				13974303E7FD3E05C135A4D8 /* Pods-LCT2020Tests.debug.xcconfig */,
+				8A792E6341523974E95E74A1 /* Pods-LCT2020Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		367F887624058D390004EEC7 = {
 			isa = PBXGroup;
 			children = (
 				367F888124058D390004EEC7 /* LCT2020 */,
 				3681A24A2472FAE200506EB7 /* LCT2020Tests */,
 				367F888024058D390004EEC7 /* Products */,
+				357B945C3870452214497CA0 /* Pods */,
+				0B4666AD38F333DC81BB946F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,8 +164,11 @@
 				367F888224058D390004EEC7 /* AppDelegate.swift */,
 				367F888424058D390004EEC7 /* SignInViewController.swift */,
 				367F888624058D390004EEC7 /* Main.storyboard */,
+				367F4BBE247952C900B60964 /* TrialTableViewController.swift */,
+				367F4BBC2479512B00B60964 /* TrialSignInViewController.swift */,
 				36E6DAD7246EF3F7000537B9 /* RecipeSearchResult.swift */,
 				36FDCCA6247482FB008BECC1 /* SessionSearchResult.swift */,
+				36926556247A98EC002D04E0 /* SessionResponse.swift */,
 				367864C72471CD3100197E04 /* UIImageView+DownloadImage.swift */,
 				36C8EADA24686B65000FC295 /* HomeViewController.swift */,
 				36C8EAD624686A41000FC295 /* SessionViewController.swift */,
@@ -190,9 +231,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 367F889124058D3A0004EEC7 /* Build configuration list for PBXNativeTarget "LCT2020" */;
 			buildPhases = (
+				F562FB1CC5B04D8044B323E0 /* [CP] Check Pods Manifest.lock */,
 				367F887B24058D390004EEC7 /* Sources */,
 				367F887C24058D390004EEC7 /* Frameworks */,
 				367F887D24058D390004EEC7 /* Resources */,
+				7CD8A0F3513A5176EE42D535 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -207,6 +250,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3681A2522472FAE200506EB7 /* Build configuration list for PBXNativeTarget "LCT2020Tests" */;
 			buildPhases = (
+				C8F6779BE5DC0CA9C1E66011 /* [CP] Check Pods Manifest.lock */,
 				3681A2452472FAE200506EB7 /* Sources */,
 				3681A2462472FAE200506EB7 /* Frameworks */,
 				3681A2472472FAE200506EB7 /* Resources */,
@@ -284,6 +328,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7CD8A0F3513A5176EE42D535 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LCT2020/Pods-LCT2020-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LCT2020/Pods-LCT2020-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LCT2020/Pods-LCT2020-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8F6779BE5DC0CA9C1E66011 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LCT2020Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F562FB1CC5B04D8044B323E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LCT2020-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		367F887B24058D390004EEC7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -294,12 +402,15 @@
 				36BAE80D247450E00054AD21 /* SessionResultCell.swift in Sources */,
 				36CA5A622466156F00327CDA /* MainTabController.swift in Sources */,
 				36E6DAD8246EF3F7000537B9 /* RecipeSearchResult.swift in Sources */,
+				36926557247A98EC002D04E0 /* SessionResponse.swift in Sources */,
 				367F888524058D390004EEC7 /* SignInViewController.swift in Sources */,
 				36C8EADF24686C08000FC295 /* RecipesViewController.swift in Sources */,
 				36C8EADB24686B65000FC295 /* HomeViewController.swift in Sources */,
 				36C8EADD24686B9B000FC295 /* AccountViewController.swift in Sources */,
 				36E6DADE246F07DA000537B9 /* RecipeSearchResultCell.swift in Sources */,
 				367864C82471CD3100197E04 /* UIImageView+DownloadImage.swift in Sources */,
+				367F4BBD2479512B00B60964 /* TrialSignInViewController.swift in Sources */,
+				367F4BBF247952C900B60964 /* TrialTableViewController.swift in Sources */,
 				367F888324058D390004EEC7 /* AppDelegate.swift in Sources */,
 				36492BC424755B05000B65D0 /* ChangePasswordViewController.swift in Sources */,
 				36C8EAD724686A41000FC295 /* SessionViewController.swift in Sources */,
@@ -466,6 +577,7 @@
 		};
 		367F889224058D3A0004EEC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BD1FD9AC4A5A47DE7E774DF /* Pods-LCT2020.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -484,6 +596,7 @@
 		};
 		367F889324058D3A0004EEC7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA95679115A2E2EAD2CFCEF2 /* Pods-LCT2020.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -502,6 +615,7 @@
 		};
 		3681A2502472FAE200506EB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13974303E7FD3E05C135A4D8 /* Pods-LCT2020Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -522,6 +636,7 @@
 		};
 		3681A2512472FAE200506EB7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A792E6341523974E95E74A1 /* Pods-LCT2020Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;

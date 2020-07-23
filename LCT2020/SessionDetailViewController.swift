@@ -10,13 +10,11 @@ import UIKit
 
 class SessionDetailViewController: UIViewController {
 
-     var sessionResult: SessionResult!
+     var sessionResult: SessionSearchResult!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
-
-        // Do any additional setup after loading the view.
     }
     
 
@@ -36,36 +34,17 @@ class SessionDetailViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             
             self.payButton.backgroundColor = UIColor.init(named: "pale grey")
-            //self.payButton.setTitle("PAID", for: UIControl.State.normal)
-           // self.payButton.titleColor(for: UIControl.State.normal) = UIColor.init(named: "pale grey")
-            //self.payButton.titleColor(for: .normal) = UIColor.init(named: "pale grey")
-            
             self.payButton.setTitle("PAID", for: .disabled)
             self.payButton.setTitleColor(UIColor.init(named: "green"), for: .disabled)
         }
-    
-        
-        
     }
     
     func updateUI() {
-        
-    addressLabel.text = sessionResult.address
-   // coachLabel.text = sessionResult.? //havent extracted it yet as its on second page of website
-   // descriptionLabel
-    sessionNameLabel.text = sessionResult.sessionName
-    timeLabel.text = sessionResult.time
-    dateLabel.text = sessionResult.date
-    priceLabel.text = sessionResult.price
+        addressLabel.text = sessionResult.address
+        sessionNameLabel.text = sessionResult.sessionName
+        timeLabel.text = sessionResult.time
+        dateLabel.text = sessionResult.date
+        priceLabel.text = sessionResult.price
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+   
 }

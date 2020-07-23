@@ -15,27 +15,19 @@ class ResultArray:Codable {
     var results = [RecipeSearchResult]()
 }
 class RecipeSearchResult:Codable, CustomStringConvertible {
-    //do I/why give default values?
-    //var title: String? = ""
-    var recipeName = "" //dont think its an optional
+    var recipeName = ""
     var recipeLink = ""
     var ingredients: String? = ""
     var thumbnail = ""
    
-    //var name:String {
-    //    return  title ?? ""
-    //}
-    
     enum CodingKeys: String, CodingKey {
         case recipeName = "title"
         case recipeLink = "href"
         case ingredients, thumbnail
     }
     
-    
     var description: String {
         return "Name: \(recipeName), Link: \(recipeLink), Ingredients: \(ingredients ?? "None")"
-        //return "Name: \(title ?? "None"), Link: \(href ?? "None"), Ingredients: \(ingredients ?? "None")"
     }
 }
 
